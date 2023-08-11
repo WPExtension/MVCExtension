@@ -1,5 +1,10 @@
 <?php 
 
+use \PHPAutoloader\Classes\controllers\MVCExtension;
+
+$mvc = new MVCExtension;
+
+
 // Define constants
 define( 'PLUGIN_SLUG', 'mvc-extension' );
 define( 'PLUGIN_ROLE', 'manage_options' );
@@ -34,7 +39,3 @@ function register_your_plugin_menu() {
   }
 
 }
-
-use \PHPAutoloader\Classes\controllers\MVCExtension;
-
-$mvc = new MVCExtension;
