@@ -1,9 +1,6 @@
 <?php 
 
-use \PHPAutoloader\Classes\controllers\MVCExtension;
-
-$mvc = new MVCExtension;
-
+new \PHPAutoloader\Classes\controllers\MVCExtension();
 
 // Define constants
 define( 'PLUGIN_SLUG', 'mvc-extension' );
