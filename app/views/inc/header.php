@@ -12,6 +12,5 @@
 <nav style="position: relative; left: 500px">
     <ul>
         <li><a href="<?php echo URLROOT; ?>">Home</a></li>
-        <li><a href="<?php echo URLROOT . 'about'; ?>">About</a></li>
     </ul>
 </nav>

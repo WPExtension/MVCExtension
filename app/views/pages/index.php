@@ -4,7 +4,14 @@
 <h1><?php echo $data['title']; ?></h1>
 <h4><?php echo $data['description']; ?></h4>
 
-<strong><?php  $data['id']; ?></strong>
+<?php 
+ 
+  foreach( $data['id'] as $collect ) {
 
+    echo $collect->title . '<br />';
+    
+  }
+
+?>
 
 <?php app_get_footer('footer'); ?>

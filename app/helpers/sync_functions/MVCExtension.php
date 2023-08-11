@@ -24,9 +24,17 @@ function register_your_plugin_menu() {
 		'Dashboard',
 		PLUGIN_ROLE,
 		PLUGIN_SLUG,
-		'your_plugin_dashboard_callback',
+		'your_plugin_dashboard',
 	);
+ 
+  function your_plugin_dashboard() {
+     
+	do_action('admin_content_extnesion', 10 );
 
+  }
 
 }
 
+use \PHPAutoloader\Classes\controllers\MVCExtension;
+
+$mvc = new MVCExtension;

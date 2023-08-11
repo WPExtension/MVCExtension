@@ -1,8 +1,11 @@
 <?php
+namespace PHPAutoloader\Classes\models;
 
-  namespace PHPAutoloader\Classes\models;
+use \PHPAutoloader\Classes\libraries\Database;
 
-  use \PHPAutoloader\Classes\libraries\Database;
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
 
   class Post {
     
