@@ -1,5 +1,6 @@
-<nav style="position: relative; left: 500px">
+<nav>
     <ul>
         <li><a href="<?php echo URLROOT; ?>">Home</a></li>
+        <li><a href="<?php echo URLROOT . '&pages=about' ?>">About</a></li>
     </ul>
 </nav>

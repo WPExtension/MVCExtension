@@ -17,7 +17,11 @@ if ( ! defined( 'WPINC' ) ) {
 
     public function getPosts(){
 
-      $this->db->query("SELECT * FROM posts");
+      $this->db->query("SELECT * 
+                        FROM wp_posts 
+                        WHERE post_type = 'post' 
+                        AND post_status = 'publish' 
+                      ");
 
       return $this->db->fetchAll();
       

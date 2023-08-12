@@ -1,4 +1,4 @@
-    
+
 <div id="app_footer">
- <?php echo '@2023';  ?>
+ <h3>@Registered 2023</h3>
 </div>

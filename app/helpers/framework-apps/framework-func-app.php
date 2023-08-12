@@ -55,3 +55,4 @@ function app_get_header( string $file = '' ) { require APPVIEWS_INC . $file . PH
  * TYPE: Function 
  * 08.10.2023 */
 function app_get_footer( string $file = '' ) { require APPVIEWS_INC . $file . PHP_EXTENSION; }
+

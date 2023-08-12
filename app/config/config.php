@@ -43,20 +43,23 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 define('APP_DBHOST','localhost');
-define('APP_DBNAME','postsapp');
-define('APP_DBUSER','root');
+define('APP_DBNAME',DB_NAME);
+define('APP_DBUSER',DB_USER);
 define('APP_DBPSWRD','');
 
 // App Root 
 define('APPROOT', dirname(dirname(__FILE__)));
+// Defined Site name
+define('SITENAME','MVCExtension');
 
 // FrameWork Loader ID
 define('PHP_NAMESPACE_ID', 'PHPAutoloader');
 define('PHP_NAMESPACE_ID_NAME', 'Classes');
 define('BASE_DIR_SYSTEM_FILE', APPROOT . '/' ); 
 
-// URL ROOT
-define('URLROOT', 'https://localhost/apps/wp2/wp-admin/admin.php?page=mvc-extension');
-// Defined Site name
-define('SITENAME','MVCExtension');
+// ADMIN ROUTE OR PLUGIN SLUG
+define( 'PLUGIN_SLUG', 'mvc-extension' );
+// ADMIN ROUTE OR PLUGIN URL
+define('URLROOT', 'http://localhost/apps/wp3/wp-admin/admin.php?page=mvc-extension');
+
  

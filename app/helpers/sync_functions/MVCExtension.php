@@ -2,8 +2,10 @@
 
 new \PHPAutoloader\Classes\controllers\MVCExtension();
 
+use \PHPAutoloader\Classes\libraries\WayPoint;
+
 // Define constants
-define( 'PLUGIN_SLUG', 'mvc-extension' );
+
 define( 'PLUGIN_ROLE', 'manage_options' );
 define( 'PLUGIN_DOMAIN', 'your-plugin-text-domain' );
 
@@ -29,10 +31,21 @@ function register_your_plugin_menu() {
 		'your_plugin_dashboard',
 	);
  
-  function your_plugin_dashboard() {
+  function your_plugin_dashboard( )  {
      
-	do_action('admin_content_extnesion', 10 );
+	$about = ((new wayPoint('pages','about'))->isValidPage()) ? 'about' : null;
+	switch( $about ) {
 
+	  case 'about' :
+	  (new wayPoint('pages','about'))->call('about_mvc_callback_content');
+	  break;
+
+	  default:
+	  (new wayPoint)->call('home_mvc_callback_content');
+	  exit;
+
+	}
+		
   }
 
 }

@@ -1,3 +1,6 @@
+<?php 
+namespace PHPAutoloader\Classes\libraries;
+
 /**
  * @copyright (c) 2023 MVCExtensionm v1.0.0 Cooked by nielsoffice 
  *
@@ -36,6 +39,73 @@
  *
  */
 
- #index_id {
-    color: red;
- }
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
+  /**
+   * WayPoint is a class that similar to a router however this version
+   * design for hooks management url responsed,
+   * @version 1.0.0
+   * Type: Class   
+   */
+  class WayPoint {
+
+    private $Registered_pages_param;
+    private $Registered_page_single;
+
+    public function __construct( string $pages_param = null, string $single_page = null )
+    {
+        $this->Registered_pages_param = $pages_param;
+        $this->Registered_page_single = $single_page;
+    }
+
+   private function mvcextension_route_reg_page_url() {
+
+       $URL = $this->Registered_pages_param;
+   
+       if(isset($_GET[$URL])) {
+   
+       $url = rtrim($_GET[$URL], '/');
+       $url = filter_var($url, FILTER_SANITIZE_URL);
+       $url = explode('/', $url );
+       return $url;
+   
+       }
+   
+   }
+
+    private function mvcextension_reg_constant() {
+
+     $qS= $_SERVER['QUERY_STRING'];
+     $rQ = "&".$this->Registered_pages_param.'='.$this->Registered_page_single;
+     $qS = trim($qS, $rQ);
+     if( $qS === PLUGIN_SLUG) {
+       return true;
+     }
+
+    }
+
+    public function isValidPage() {
+
+      if( ! $this->mvcextension_reg_constant() ) { return; }
+  
+      if( !is_null($this->mvcextension_route_reg_page_url())){
+        
+         $url = $this->mvcextension_route_reg_page_url();
+         if($url[0] == $this->Registered_page_single) {
+           return true;
+         }
+         
+     }
+
+   }
+
+    public function call( $hook_name, ...$arg ) {
+
+       do_action($hook_name, $arg);
+
+    }
+
+}
+
