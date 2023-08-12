@@ -1,5 +1,4 @@
     
- <script src="<?php echo URLROOT; ?>/js/main.js"> </script> 
-   
-</body>
-</html>
+<div id="app_footer">
+ <?php echo '@2023';  ?>
+</div>
