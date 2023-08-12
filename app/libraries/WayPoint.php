@@ -53,14 +53,18 @@ if ( ! defined( 'WPINC' ) ) {
 
     private $Registered_pages_param;
     private $Registered_page_single;
+    private $Registered_handler;
 
     public function __construct( string $pages_param = null, string $single_page = null )
     {
         $this->Registered_pages_param = $pages_param;
         $this->Registered_page_single = $single_page;
+
+        $this->Registered_handler = get_current_screen()?? '';
+       
     }
 
-   private function mvcextension_route_reg_page_url() {
+   public function mvcextension_route_reg_page_url() {
 
        $URL = $this->Registered_pages_param;
    
@@ -75,12 +79,9 @@ if ( ! defined( 'WPINC' ) ) {
    
    }
 
-    private function mvcextension_reg_constant() {
-
-     $qS= $_SERVER['QUERY_STRING'];
-     $rQ = "&".$this->Registered_pages_param.'='.$this->Registered_page_single;
-     $qS = trim($qS, $rQ);
-     if( $qS === PLUGIN_SLUG) {
+    public function mvcextension_reg_constant( $screen ) {
+      
+     if(  $screen->parent_base === PLUGIN_SLUG) {
        return true;
      }
 
@@ -88,8 +89,8 @@ if ( ! defined( 'WPINC' ) ) {
 
     public function isValidPage() {
 
-      if( ! $this->mvcextension_reg_constant() ) { return; }
-  
+     if( ! $this->mvcextension_reg_constant( $this->Registered_handler ) ) { return; }
+
       if( !is_null($this->mvcextension_route_reg_page_url())){
         
          $url = $this->mvcextension_route_reg_page_url();
@@ -97,11 +98,11 @@ if ( ! defined( 'WPINC' ) ) {
            return true;
          }
          
-     }
+     } 
 
    }
 
-    public function call( $hook_name, ...$arg ) {
+    public function call( $hook_name, ...$arg ) : void {
 
        do_action($hook_name, $arg);
 

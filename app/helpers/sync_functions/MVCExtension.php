@@ -33,19 +33,25 @@ function register_your_plugin_menu() {
  
   function your_plugin_dashboard( )  {
      
-	$about = ((new wayPoint('pages','about'))->isValidPage()) ? 'about' : null;
-	switch( $about ) {
+	$about = new WayPoint('pages','about');
+	if( $about->isValidPage() ) {
+		$about->call('about_mvc_callback_content');
 
-	  case 'about' :
-	  (new wayPoint('pages','about'))->call('about_mvc_callback_content');
-	  break;
+	} else {
 
-	  default:
-	  (new wayPoint)->call('home_mvc_callback_content');
-	  exit;
+	   $setting = new WayPoint('pages','settings');
+	   if( $setting->isValidPage() ) {
+	   echo 'Setting page';
 
+	   } else {
+
+		 $home = new WayPoint();
+		 if( !$home->isValidPage() ) {
+		 $home->call('home_mvc_callback_content');
+		 
+		}
+	  }
 	}
-		
   }
 
 }
