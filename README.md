@@ -3,7 +3,10 @@ Support PHP v8 and future++
 
 WP Extension is a WordPress MVC framework. Design to build application wp plugin maintainable and secure codes.
 
+<br />MVC Extension with VueJS 
+<br />https://github.com/WPExtension/MVCExtensionWithVueJS
 
+<br />
 <h2>Thanks To:</h2>
 <h5>
 Github : To allow me to upload my PHP Library PHPWine Vanilla Flavour to repository<br /> 
