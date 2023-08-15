@@ -1,6 +1,6 @@
 <?php 
 
-new \PHPAutoloader\Classes\controllers\MVCExtension();
+new \PHPAutoloader\Classes\controllers\MVCExtension;
 
 use \PHPAutoloader\Classes\libraries\WayPoint;
 
