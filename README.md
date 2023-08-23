@@ -5,7 +5,7 @@ WP Extension is a WordPress MVC framework. Design to build application wp plugin
 
 <br />MVC Extension with VueJS 
 <br />https://github.com/WPExtension/MVCExtensionWithVueJS
-<hr />
+<h2></h2>
 <br />MVC Extension with VueJS and Component 
 <br />https://github.com/WPExtension/MVCExtensionWithVueJSComponent
 
