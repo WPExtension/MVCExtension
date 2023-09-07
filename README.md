@@ -10,6 +10,19 @@ WP Extension is a WordPress MVC framework. Design to build application wp plugin
 <br />https://github.com/WPExtension/MVCExtensionWithVueJSComponent
 
 <br />
+<br /> WP Query post object 
+<br /> Source: https://nielsoffice2017.wordpress.com/2021/11/24/wordpress-the-loop-fetch-data-from-database-wp_query-php/
+
+```PHP
+// Handling Post object in Controller
+$query = new WP_Query( array( 'post_type' => 'page' ) );
+$posts = $query->posts;
+
+// @view
+foreach($posts as $post) { echo $post->post_name; }
+```
+
+<br />
 <h2>Thanks To:</h2>
 <h5>
 Github : To allow me to upload my PHP Library PHPWine Vanilla Flavour to repository<br /> 
