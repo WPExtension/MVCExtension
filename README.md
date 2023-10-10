@@ -6,6 +6,9 @@ WP Extension is a WordPress MVC framework. Design to build application wp plugin
 <br /> <b>Package WP Plugin Included installed with MVCExtension : </b>
 <br /> > Application Password (REST_API Authentication) By George Stephanis 
 <br /> > CMB2 Custom field By CMB2 team
+<br /> <ul>
+         <li><a href="http://hasinhayder.github.io/cmb2-metabox-generator/"> CMB2 Generator </a></li>
+       </ul>
 
 <h2></h2>
 
