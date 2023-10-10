@@ -101,6 +101,7 @@
 			require_once CMB2_DIR . 'includes/CMB2_Base.php';
 			require_once CMB2_DIR . 'includes/CMB2.php';
 			require_once CMB2_DIR . 'includes/helper-functions.php';
+			require_once CMB2_DIR . 'includes/cmb2-tabs/cmb2-tabs.php';
 
 			// Now kick off the class autoloader.
 			spl_autoload_register( 'cmb2_autoload_classes' );
