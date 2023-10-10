@@ -30,7 +30,7 @@ WP Extension is a WordPress MVC framework. Design to build application wp plugin
 <br />MVC Extension with VueJS and Component 
 <br />https://github.com/WPExtension/MVCExtensionWithVueJSComponent
 <h2></h2>
-<br />MVC Extension With VueJS Component Webpack Optization JS&CSS
+<br />MVC Extension With VueJS Component Webpack Optimization JS&CSS
 <br />https://github.com/WPExtension/MVCExtensionWithVueJSComponentWebpack
 <h2></h2>
 <br /> WP Query post object 
