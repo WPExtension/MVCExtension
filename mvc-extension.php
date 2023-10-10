@@ -50,6 +50,28 @@ if ( ! defined( 'WPINC' ) ) {
   initMVCExtension();
  }
 
+ $PACKAGE_DIR = [
+    'APPLICATION_PASSWORD' =>  'vendor/application-passwords/class.application-passwords.php',
+    'CMB2' => 'vendor/cmb2/init.php',	
+ ];
+
+ if( file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['CMB2']) &&
+     file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['APPLICATION_PASSWORD']) ) 
+  { 
+  
+   require_once ( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['CMB2'] );
+   CMB2_Bootstrap_2101::initiate();
+	 
+   define( 'APPLICATION_PASSWORDS_VERSION', '0.1.3' );
+   require_once ( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['APPLICATION_PASSWORD'] ); 
+   Application_Passwords::add_hooks();
+
+  } else { 
+  
+   die('Initialized package plugins doesn\'t exist'); 
+
+  }
+
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-mvc-extension-activator.php
