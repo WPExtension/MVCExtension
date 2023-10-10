@@ -38,7 +38,7 @@ if ( ! defined( 'WPINC' ) ) {
  define( 'MVC_EXTENSION_VERSION', '1.0.0' );
 
 /**
- * MVC Extenion init.
+ * MVC Extension init.
  * Start at version 1.0.0 
  */
  if( !function_exists('initMVCExtension') ) {
