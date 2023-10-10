@@ -58,6 +58,9 @@ if ( ! defined( 'WPINC' ) ) {
  define('APPHELPER', APPROOT . '/helpers/' );
  
   //Defined Helpers
+  define('APP_INIT', APPROOT . '/init/' );
+
+  //Defined Helpers
   define('APPLIBRARIES', APPROOT . '/libraries/' );
 
  //Defined views directory 
