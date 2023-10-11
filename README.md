@@ -7,21 +7,7 @@ WP Extension is a WordPress MVC framework. Design to build application wp plugin
 <br /> > wpbb[dot]me Plugin Boilerplate
 <br /> > Application Password (REST_API Authentication) By George Stephanis 
 <br /> > CMB2 Custom field By CMB2 team
-<br /> <ul>
-         <li> WordPress MVCExtension Resources </li>
-         <li><a href="http://hasinhayder.github.io/cmb2-metabox-generator/"> CMB2 Generator </a></li>
-         <li><a href="https://underscores.me/"> WP Theme Underscore </a></li>
-         <li><a href="https://generatewp.com/"> WP Generator </a></li> 
-         <li><a href="https://github.com/nielsoffice/WP_WooHooksFunctions"> WP Filter/Hooks </a></li>
-         <li><a href="https://github.com/nielsoffice?tab=repositories&q=WP&type=&language=&sort="> WP References </a></li> 
-         <li><a href="https://www.wp-hasty.com/"> WP Development </a></li> 
-       </ul>
-<h2></h2>
-<br /> <ul>
-         <li> WordPress Theme/Plugin/App Development </li>
-         <li><a href="https://wordpress.org/plugins/query-monitor/"> Query Monitor </a></li>
-         <li><a href="https://wordpress.org/plugins/disable-json-api/"> Disable REST_API </a></li> 
-       </ul>
+
 <h2></h2>
 
 <br />MVC Extension with VueJS 
