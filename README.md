@@ -1,7 +1,7 @@
 # MVCExtension - a WordPress plugin mvc framework
 Support PHP v8 and future++ 
 
-WP Extension is a WordPress MVC framework. Design to build application wp plugin maintainable and secure codes.
+WP Extension is a WordPress MVC framework. Design to build backend application wp plugin and theme maintainable and secure codes.
 <br />
 <br /> <b>Package WP Plugin Included installed with MVCExtension : </b>
 <br /> > wpbb[dot]me Plugin Boilerplate
