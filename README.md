@@ -2,12 +2,13 @@
 Support PHP v8 and future++ 
 
 WP Extension is a WordPress MVC framework. Design to build application wp plugin maintainable and secure codes.
-
+<br />
 <br /> <b>Package WP Plugin Included installed with MVCExtension : </b>
 <br /> > wpbb[dot]me Plugin Boilerplate
+<br /> > CMB2 Custom field By CMB2 team
 <br /> > Application Password (BasicAuth REST_API Authentication) By George Stephanis 
 <br /> > JWT Authentication for WP REST API (Bearer REST_API Authentication) By Enrique Chavez 
-<br /> > CMB2 Custom field By CMB2 team
+
 
 ```PHP
  // Secured Authentication Token:
