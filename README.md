@@ -9,7 +9,7 @@ WP Extension is a WordPress MVC framework. Design to build backend application w
 <br /> > Application Password (BasicAuth REST_API Authentication) By George Stephanis 
 <br /> > JWT Authentication for WP REST API (Bearer REST_API Authentication) By Enrique Chavez 
 
-<a href="https://github.com/WPExtension/MVCollections/raw/main/MVCExtension.zip">  Download Now MVCExtension v1.8.0.0 </a>
+<a href="https://github.com/WPExtension/MVCollections/raw/main/MVCExtension.zip">  Download 1.8k weekly MVCExtension v1.8.0.0 </a>
 
 ```PHP
  // Secured Authentication Token:
