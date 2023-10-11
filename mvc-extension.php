@@ -37,31 +37,36 @@ if ( ! defined( 'WPINC' ) ) {
  */
  define( 'MVC_EXTENSION_VERSION', '1.0.0' );
 
-/**
- * MVC Extension init.
- * Start at version 1.0.0 
- */
+ /**
+  * MVC Extenion init.
+  * Start at version 1.0.0 
+  */
  if( !function_exists('initMVCExtension') ) {
 	function initMVCExtension() {
-	  if( file_exists( plugin_dir_path( __FILE__ ) .'app/bootstrap.php' )) { 
-		require_once ( plugin_dir_path( __FILE__ ) .'app/bootstrap.php'); } 
+	  if( file_exists( plugin_dir_path( __FILE__ ) . 'app/bootstrap.php' )) { 
+ 		  require_once ( plugin_dir_path( __FILE__ ) . 'app/bootstrap.php' ); } 
 	  else { die('Initialized files bootstrap doesn\'t exist'); }
 	}
   initMVCExtension();
  }
 
  $PACKAGE_DIR = [
-    'APPLICATION_PASSWORD' =>  'vendor/application-passwords/class.application-passwords.php',
-    'CMB2' => 'vendor/cmb2/init.php',	
- ];
+	'APPLICATION_PASSWORD' =>  'vendor/application-passwords/class.application-passwords.php',
+  'JWT_AUTHENTICATION' =>  'vendor/jwt-authentication-for-wp-rest-api/jwt-auth.php',
+	'CMB2' => 'vendor/cmb2/init.php',	
+   ];
 
- if( file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['CMB2']) &&
-     file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['APPLICATION_PASSWORD']) ) 
+   if( file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['CMB2']) &&
+       file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['APPLICATION_PASSWORD']) && 
+       file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['JWT_AUTHENTICATION']) ) 
   { 
-  
+
    require_once ( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['CMB2'] );
    CMB2_Bootstrap_2101::initiate();
-	 
+	  
+   require_once ( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['JWT_AUTHENTICATION'] );
+   run_jwt_auth();
+ 
    define( 'APPLICATION_PASSWORDS_VERSION', '0.1.3' );
    require_once ( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['APPLICATION_PASSWORD'] ); 
    Application_Passwords::add_hooks();
