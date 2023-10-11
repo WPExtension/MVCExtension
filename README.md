@@ -5,7 +5,7 @@ WP Extension is a WordPress MVC framework. Design to build application wp plugin
 
 <br /> <b>Package WP Plugin Included installed with MVCExtension : </b>
 <br /> > wpbb[dot]me Plugin Boilerplate
-<br /> > Application Password (REST_API Authentication) By George Stephanis 
+<br /> > Application Password (BasicAuth REST_API Authentication) By George Stephanis 
 <br /> > JWT Authentication for WP REST API (Bearer REST_API Authentication) By Enrique Chavez 
 <br /> > CMB2 Custom field By CMB2 team
 
