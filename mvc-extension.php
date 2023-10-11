@@ -50,10 +50,10 @@ if ( ! defined( 'WPINC' ) ) {
   initMVCExtension();
  }
 
- $PACKAGE_DIR = [
-	'APPLICATION_PASSWORD' =>  'vendor/application-passwords/class.application-passwords.php',
-  'JWT_AUTHENTICATION' =>  'vendor/jwt-authentication-for-wp-rest-api/jwt-auth.php',
-	'CMB2' => 'vendor/cmb2/init.php',	
+   $PACKAGE_DIR = [
+     'APPLICATION_PASSWORD' =>  'vendor/application-passwords/class.application-passwords.php',
+     'JWT_AUTHENTICATION' =>  'vendor/jwt-authentication-for-wp-rest-api/jwt-auth.php',
+     'CMB2' => 'vendor/cmb2/init.php',	
    ];
 
    if( file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['CMB2']) &&
