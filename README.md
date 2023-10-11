@@ -27,6 +27,9 @@ WP Extension is a WordPress MVC framework. Design to build application wp plugin
  POSTMAN/Thunder Create and Generate Token:
  http://<domain>/wp-json/jwt-auth/v1/token?username=admin&password=admin
 
+ HTTPS AUTHORIZATION TYPE: Bearer
+ Token: 1614c2sa1c65asc
+ 
 ```
 
 <h2></h2>
