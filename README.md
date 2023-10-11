@@ -8,6 +8,27 @@ WP Extension is a WordPress MVC framework. Design to build application wp plugin
 <br /> > Application Password (REST_API Authentication) By George Stephanis 
 <br /> > CMB2 Custom field By CMB2 team
 
+```PHP
+ // Secured Authentication Token:
+ Installed WP Plugin: https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/ 
+ Instruction:
+ Edit Your Htaccess: 
+   RewriteEngine on
+   RewriteCond %{HTTP:Authorization} ^(.*)
+   RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+ 
+ At config file
+   define('JWT_AUTH_SECRET_KEY', 'your-top-secret-key');
+
+ Endpoint | HTTP Verb
+  /wp-json/jwt-auth/v1/token | POST
+  /wp-json/jwt-auth/v1/token/validate | POST
+
+ POSTMAN/Thunder Create and Generate Token:
+ http://<domain>/wp-json/jwt-auth/v1/token?username=admin&password=admin
+
+```
+
 <h2></h2>
 
 <br />MVC Extension with VueJS 
