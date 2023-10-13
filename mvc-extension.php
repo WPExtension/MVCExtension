@@ -57,15 +57,11 @@ if ( ! defined( 'WPINC' ) ) {
    ];
 
    if( file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['CMB2']) &&
-       file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['APPLICATION_PASSWORD']) && 
-       file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['JWT_AUTHENTICATION']) ) 
+       file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['APPLICATION_PASSWORD'])) 
   { 
 
    require_once ( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['CMB2'] );
    CMB2_Bootstrap_2101::initiate();
-	  
-   require_once ( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['JWT_AUTHENTICATION'] );
-   run_jwt_auth();
  
    define( 'APPLICATION_PASSWORDS_VERSION', '0.1.3' );
    require_once ( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['APPLICATION_PASSWORD'] ); 
