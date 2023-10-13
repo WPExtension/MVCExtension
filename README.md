@@ -7,10 +7,9 @@ WP Extension is a WordPress MVC framework. Design to build backend application w
 <br /> > wpbb[dot]me Plugin Boilerplate
 <br /> > CMB2 Custom field By CMB2 team
 <br /> > Application Password (BasicAuth REST_API Authentication) By George Stephanis 
-<br /> > JWT Authentication for WP REST API (Bearer REST_API Authentication) By Enrique Chavez 
-
 
 ```PHP
+ // RECOMMEND JWT AUTH: <br /> > JWT Authentication for WP REST API By Enrique Chavez
  // Secured Authentication Token:
  # Installed WP Plugin: https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/ 
  # Instruction:
