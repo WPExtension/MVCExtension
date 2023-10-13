@@ -51,9 +51,9 @@ if ( ! defined( 'WPINC' ) ) {
  }
 
    $PACKAGE_DIR = [
-     'APPLICATION_PASSWORD' =>  'package/application-passwords/class.application-passwords.php',
-     'JWT_AUTHENTICATION' =>  'package/jwt-authentication-for-wp-rest-api/jwt-auth.php',
-     'CMB2' => 'package/cmb2/init.php',	
+     'APPLICATION_PASSWORD' =>  'package-plugin/application-passwords/class.application-passwords.php',
+     'JWT_AUTHENTICATION' =>  'package-plugin/jwt-authentication-for-wp-rest-api/jwt-auth.php',
+     'CMB2' => 'package-plugin/cmb2/init.php',	
    ];
 
    if( file_exists( plugin_dir_path( __FILE__ ) . $PACKAGE_DIR['CMB2']) &&
